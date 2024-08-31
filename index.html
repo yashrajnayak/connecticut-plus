@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut Plus - Compare Snapshots</title>
+    <link rel="stylesheet" href="connecticut-plus-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Connecticut Plus</h1>
+            <p>Compare Developer Meetup Connection Snapshots</p>
+        </header>
+        <main>
+            <div class="input-group">
+                <label for="snapshot1">Snapshot 1 (Earlier):</label>
+                <textarea id="snapshot1" placeholder="Paste the earlier snapshot here"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="snapshot2">Snapshot 2 (Later):</label>
+                <textarea id="snapshot2" placeholder="Paste the later snapshot here"></textarea>
+            </div>
+            <button id="compare" class="btn">Compare Snapshots</button>
+            <div id="result" class="result"></div>
+        </main>
+        <footer>
+            <p>Created by <a href="https://github.com/yashrajnayak" target="_blank">Yashraj Nayak</a>. Contribute on <a href="https://github.com/yashrajnayak/connecticut" target="_blank">GitHub</a>.</p>
+        </footer>
+    </div>
+    <script src="connecticut-plus-script.js"></script>
+</body>
+</html>
