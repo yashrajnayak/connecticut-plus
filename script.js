@@ -1,33 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const compareBtn = document.getElementById('compare');
-    const resetBtn = document.getElementById('reset');
-    const resultDiv = document.getElementById('result');
-    const totalConnectionsSpan = document.getElementById('total-connections');
-    const newConnectionsSpan = document.getElementById('new-connections');
-
-    compareBtn.addEventListener('click', () => {
-        // Your comparison logic here
-        const totalConnections = 0; // Replace with actual calculation
-        const newConnections = 0; // Replace with actual calculation
-
-        // Update result values
-        totalConnectionsSpan.textContent = totalConnections;
-        newConnectionsSpan.textContent = newConnections;
-
-        // Show results and hide compare button
-        resultDiv.classList.remove('hidden');
-        compareBtn.classList.add('hidden');
-    });
-
-    resetBtn.addEventListener('click', () => {
-        // Reset form and hide results
-        document.getElementById('snapshot1').value = '';
-        document.getElementById('snapshot2').value = '';
-        resultDiv.classList.add('hidden');
-        compareBtn.classList.remove('hidden');
-    });
-});
-
 // Get DOM elements
 const compareButton = document.getElementById('compare');
 const snapshot1Input = document.getElementById('snapshot1');
