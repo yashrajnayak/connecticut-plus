@@ -73,18 +73,12 @@ function displayResults(comparison, timestamp1, timestamp2) {
 
     let resultHTML = `
         <h2>Comparison Results</h2>
-        <div class="snapshot-times">
-            <p><strong>Snapshot 1 Time:</strong> ${new Date(timestamp1).toLocaleString()}</p>
-            <p><strong>Snapshot 2 Time:</strong> ${new Date(timestamp2).toLocaleString()}</p>
-        </div>
-        <div class="total-connections">
-            <h3>Total New Connections</h3>
-            <span class="big-number">${totalNewConnections}</span>
-        </div>
-        <table id="results-table">
+        <p>Snapshot 1 Time: ${new Date(timestamp1).toLocaleString()}</p>
+        <p>Snapshot 2 Time: ${new Date(timestamp2).toLocaleString()}</p>
+        <p>Total New Connections: ${totalNewConnections}</p>
+        <table>
             <tr>
                 <th>Name</th>
-                <th>Username</th>
                 <th>Before</th>
                 <th>After</th>
                 <th>New Connections</th>
@@ -95,7 +89,6 @@ function displayResults(comparison, timestamp1, timestamp2) {
         resultHTML += `
             <tr>
                 <td>${user.Name}</td>
-                <td>${user.Username || 'N/A'}</td>
                 <td>${user.Before}</td>
                 <td>${user.After}</td>
                 <td>${user.NewConnections}</td>
@@ -103,23 +96,6 @@ function displayResults(comparison, timestamp1, timestamp2) {
         `;
     });
 
-    resultHTML += `
-        </table>
-        <button id="copy-table" class="btn">Copy Table to Clipboard</button>
-    `;
+    resultHTML += '</table>';
     resultDiv.innerHTML = resultHTML;
-
-    // Add event listener for the copy button
-    document.getElementById('copy-table').addEventListener('click', copyTableToClipboard);
-}
-
-function copyTableToClipboard() {
-    const table = document.getElementById('results-table');
-    const range = document.createRange();
-    range.selectNode(table);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-    alert('Table copied to clipboard!');
 }
