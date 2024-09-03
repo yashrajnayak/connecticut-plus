@@ -26,6 +26,10 @@ function compareSnapshots() {
         comparison.sort((a, b) => b.NewConnections - a.NewConnections);
 
         displayResults(comparison, snapshot1.timestamp, snapshot2.timestamp);
+
+        // Clear the snapshot fields after displaying the result
+        snapshot1Input.value = '';
+        snapshot2Input.value = '';
     } catch (error) {
         alert('Error parsing snapshots. Please make sure you\'ve pasted valid snapshot data.');
         console.error(error);
