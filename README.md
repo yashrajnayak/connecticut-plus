@@ -6,6 +6,9 @@ Connecticut Plus is a companion app to [Connecticut](https://yashrajnayak.github
 
 Connecticut Plus allows you to visualize the growth in connections between GitHub users by comparing two snapshots taken from the Connecticut app. It provides insights into how developer networks evolve during meetups or over specific periods.
 
+![image](https://github.com/user-attachments/assets/4bcde637-a71c-4a3a-8c8a-52f5dae866e3)
+
+
 ## Features
 
 - Compare two snapshots from Connecticut
